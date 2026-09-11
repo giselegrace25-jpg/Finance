@@ -12,7 +12,7 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/uploads/' });
 
   app.enableCors({
-    origin: process.env.CORS_ORIGIN?.split(',') || ['https://invest-bankend-1-x3yz.onrender.com'],
+    origin: process.env.CORS_ORIGIN?.split(',') || ['https://invest-bankend-1-x3yz.onrender.com/api'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
