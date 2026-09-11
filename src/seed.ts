@@ -6,10 +6,10 @@ import * as bcrypt from 'bcryptjs';
 
 const AppDataSource = new DataSource({
   type: 'mysql',
-  host: process.env.DB_HOST ?? 'localhost',
-  port: +(process.env.DB_PORT ?? '3306'),
-  username: process.env.DB_USER ?? 'root',
-  password: process.env.DB_PASS ?? 'root1234',
+  host: process.env.DB_HOST ?? 'gateway01.eu-central-1.prod.aws.tidbcloud.com',
+  port: +(process.env.DB_PORT ?? '4000'),
+  username: process.env.DB_USER ?? 'iGZpBCZvwpTVkrD.root',
+  password: process.env.DB_PASS ?? 'uGXfglPxAfi4Spqd',
   database: process.env.DB_NAME ?? 'bettrend',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
