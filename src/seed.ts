@@ -9,7 +9,7 @@ const AppDataSource = new DataSource({
   host: process.env.DB_HOST ?? 'gateway01.eu-central-1.prod.aws.tidbcloud.com',
   port: +(process.env.DB_PORT ?? '4000'),
   username: process.env.DB_USER ?? 'iGZpBCZvwpTVkrD.root',
-  password: process.env.DB_PASS ?? 'uGXfglPxAfi4Spqd',
+  password: process.env.DB_PASS ?? 'x9J2y7fnvig30Nem',
   database: process.env.DB_NAME ?? 'bettrend',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
