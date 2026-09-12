@@ -34,37 +34,11 @@ export class CampaignsService implements OnModuleInit {
   constructor(@InjectRepository(Plan) private repo: Repository<Plan>) {}
 
   async onModuleInit() {
-  try {
-    console.log('=== DEBUT SEED PLANS ===');
-    for (const data of SEED_PLANS) {
-      console.log('Recherche du plan:', data.slug);
-      const exists = await this.repo.findOneBy({
-        slug: data.slug,
-      });
-      console.log('Résultat:', exists ? 'EXISTE' : 'N EXISTE PAS');
-      if (!exists) {
-        await this.repo.save(
-          this.repo.create({
-            ...data,
-            active: true,
-          } as any),
-        );
-        console.log('Plan créé:', data.slug);
-      }
-    }
-    console.log('=== FIN SEED PLANS ===');
-  } catch (error) {
-    console.error('=== ERREUR SEED PLANS ===');
-    console.error(error);
-    throw error;
-  }
-}
-  /*async onModuleInit() {
     for (const data of SEED_PLANS) {
       const exists = await this.repo.findOneBy({ slug: data.slug });
       if (!exists) await this.repo.save(this.repo.create({ ...data, active: true } as any));
     }
-  }*/
+  }
 
   findAll() {
     return this.repo.find({ where: { active: true }, order: { platform: 'ASC', amount: 'ASC' } });
