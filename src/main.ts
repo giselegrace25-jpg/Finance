@@ -6,12 +6,9 @@ import { join } from 'path';
 import helmet from 'helmet';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  const port = process.env.PORT || 10000;
+  const app = await NestFactory.create<NestExpressApplication>(AppModule); 
   app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
   app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/uploads/' });
-  await app.listn(port, '0.0.0.0'); 
-  console.log('Application running on port ${port}');
   app.enableCors({
     origin: process.env.CORS_ORIGIN?.split(',') || ['https://invest-bankend-1-x3yz.onrender.com/api'],
     credentials: true,
