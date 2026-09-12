@@ -10,7 +10,7 @@ async function bootstrap() {
   app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
   app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/uploads/' });
   app.enableCors({
-    origin: process.env.CORS_ORIGIN?.split(',') || ['https://finance-frontend-50cw.onrender.com/api'],
+    origin: process.env.CORS_ORIGIN?.split(',') || ['https://finance-bankend.onrender.com/api'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
