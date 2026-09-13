@@ -3,7 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 export type Platform = '1XBET' | 'BETWINNER' | 'BETPAWA' | 'MELBET';
 export type PlanType = 'Simple' | 'Plus' | 'Max' | 'MaxPlus';
 
-@Entity('plans')
+@Entity()
 export class Plan {
   @PrimaryGeneratedColumn()
   id: number;
