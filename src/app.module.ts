@@ -30,7 +30,7 @@ import { WithdrawalRequestsModule } from './withdrawal-requests/withdrawal-reque
         username: config.get('DB_USER'),
         password: config.get('DB_PASS'),
         database: config.get('DB_NAME'),
-        entities: [__dirname + '/*/.entity{.ts,.js}'],
+        emangueugildas@gmail.com
         synchronize: true, // Mets true le temps du 1er déploiement pour créer les tables
         ssl: {
           rejectUnauthorized: true,
