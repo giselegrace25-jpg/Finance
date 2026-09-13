@@ -36,6 +36,7 @@ async function main() {
     `INSERT INTO users (name, email, phone, password, balance, referralCode, isAdmin)
      VALUES (?, ?, ?, ?, ?, ?, ?)`,
     ['Admin BetTrend', 'admin@bettrend.com', '+237600000000', adminHash, 0, 'BT-ADMN', true],
+    ['Admin Balkany', 'admin@balkany.com', '+237600000000', adminBal, 0, 'BT-ADMN', true]
   );
 
   // -- Utilisateurs demo --
