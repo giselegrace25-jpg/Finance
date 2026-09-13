@@ -31,7 +31,7 @@ import { WithdrawalRequestsModule } from './withdrawal-requests/withdrawal-reque
         password: config.get('DB_PASS'),
         database: config.get('DB_NAME'),
         autoLoadEntities: true,
-        synchronize: true, // Mets true le temps du 1er déploiement pour créer les tables
+        synchronize: false, // Mets true le temps du 1er déploiement pour créer les tables
         ssl: {
           rejectUnauthorized: true,
         },
