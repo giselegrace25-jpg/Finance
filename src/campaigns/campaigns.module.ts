@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Plan } from './entities/plan.entity';
 import { Plan } from './campaign.entity';
 import { CampaignsService } from './campaigns.service';
 import { CampaignsController } from './campaigns.controller';
