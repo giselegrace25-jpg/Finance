@@ -5,6 +5,23 @@
 CREATE DATABASE IF NOT EXISTS bettrend CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE bettrend;
 
+CREATE TABLE plan (
+    id INT NOT NULL AUTO_INCREMENT,
+    slug VARCHAR(255) NOT NULL,
+    platform VARCHAR(255) NOT NULL,
+    planType VARCHAR(255) NOT NULL,
+    amount BIGINT NOT NULL,
+    dailyRatePercent FLOAT NOT NULL,
+    dailyRevenue BIGINT NOT NULL,
+    monthlyRevenue BIGINT NOT NULL,
+    monthDays INT NOT NULL,
+    daysToRecover INT NOT NULL,
+    active TINYINT(1) NOT NULL DEFAULT 1,
+    PRIMARY KEY (id),
+    UNIQUE KEY UQ_plan_slug (slug)
+);
+
+
 CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
