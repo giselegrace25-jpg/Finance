@@ -35,9 +35,8 @@ async function main() {
   await db.query(
     `INSERT INTO users (name, email, phone, password, balance, referralCode, isAdmin)
      VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    ['Admin Balkany', 'admin@balkany.com', '+237670000000', adminBalkany, 0, 'BT-ADMN', true],
+    ['Admin BetTrend', 'admin@bettrend.com', '+237600000000', adminHash, 0, 'BT-ADMN', true],
   );
-  //['Admin BetTrend', 'admin@bettrend.com', '+237600000000', adminHash, 0, 'BT-ADMN', true],
   // -- Utilisateurs demo --
   const kamga = await db.query(
     `INSERT INTO users (name, email, phone, password, balance, referralCode, referredBy)
